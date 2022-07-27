@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Crop-Pic</title>
+
+    <!-- ./css-3rd -->
+    <link rel="stylesheet" href="https://unpkg.com/material-icons@1.11.1/iconfont/material-icons.css" />
+    <link rel="stylesheet" href="https://unpkg.com/cropperjs@1.5.12/dist/cropper.min.css" />
+    <link rel="stylesheet"
+        href="https://unpkg.com/material-components-web@14.0.0/dist/material-components-web.min.css" />
+
+    <!-- ./css-1rd(必须放在css-3rd后面，否则MDC,FAB样式异常) -->
+    <link href="./css/main.css" rel="stylesheet" />
+    <style>
+        .cropper-view-box,
+        .cropper-face {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 打开图片文件-->
+    <input type="file" id="openFileDialog-Img" style="display: none" />
+
+    <div id="div-1">
+        <p id="div-1-p1">尺寸指示器：</p>
+    </div>
+
+    <!-- Wrap the image or canvas element with a block element (container) -->
+    <div>
+        <img id="image" src="./image/picture.webp" crossorigin>
+    </div>
+
+    <button class="mdc-fab app-fab--open" aria-label="code">
+        <span class="mdc-fab__icon">
+            <span id="fab-1" class="material-icons">folder_open</span>
+        </span>
+    </button>
+
+    <button class="mdc-fab app-fab--save" aria-label="cy">
+        <span class="mdc-fab__icon">
+            <span id="fab-2" class="material-icons">file_download</span>
+        </span>
+    </button>
+
+    <script src="https://unpkg.com/material-components-web@14.0.0/dist/material-components-web.min.js"></script>
+</body>
+
+<script src="./mjs/crop-a-round-image.mjs" type="module"></script>
+
+</html>
